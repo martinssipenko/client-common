@@ -56,8 +56,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "sebastian/comparator:^3.0.2" --no-interaction --no-update
-          composer update --prefer-dist --prefer-stable --prefer-lowest --no-interaction --no-progress
+          composer require "sebastian/comparator:^3.0.2" --no-interaction --no-update --ignore-platform-req=php
+          composer update --prefer-dist --prefer-stable --prefer-lowest --no-interaction --no-progress --ignore-platform-req=php
 
       - name: Execute tests
         run: composer test
